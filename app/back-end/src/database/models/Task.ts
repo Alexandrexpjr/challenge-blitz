@@ -1,6 +1,6 @@
-import { DataTypes, Model } from 'sequelize/types';
-import db from '.';
-import { Status } from '../../enum/Status';
+import { DataTypes, Model } from "sequelize/types";
+import db from ".";
+import { Status } from "../../enum/Status";
 
 class Task extends Model {
   public id!: number;
@@ -36,7 +36,7 @@ Task.init({
   },
 }, {
   sequelize: db,
-  modelName: 'tasks'
+  modelName: "tasks",
 });
 
 export default Task;
