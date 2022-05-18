@@ -1,4 +1,4 @@
-import express from 'express';
+import express from "express";
 export default class App {
   public app: express.Express;
 
@@ -9,9 +9,9 @@ export default class App {
 
   private config():void {
     const accessControl: express.RequestHandler = (_req, res, next) => {
-      res.header('Access-Control-Allow-Origin', '*');
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-      res.header('Access-Control-Allow-Headers', '*');
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+      res.header("Access-Control-Allow-Headers", "*");
       next();
     };
     this.app.use(accessControl);
