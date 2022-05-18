@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/server.ts"
+    "start": "node build/server.js",
+    "build": "npx -y tsc",
+    "dev": "ts-node server.ts"
   },
   "devDependencies": {
     "@types/chai": "4.3.0",
