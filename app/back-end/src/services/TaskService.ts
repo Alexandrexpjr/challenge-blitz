@@ -2,7 +2,7 @@ import TaskModel from "../database/models/Task";
 import { Status } from "../enum/Status";
 import ITask from "../interface/ITask";
 
-export class TaskService {
+export default class TaskService {
   public getTasks = async ():Promise<ITask[]> => {
     const tasks = await TaskModel.findAll();
     return tasks as ITask[];

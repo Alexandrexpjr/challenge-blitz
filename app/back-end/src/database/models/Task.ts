@@ -1,4 +1,4 @@
-import { DataTypes, Model } from "sequelize/types";
+import { DataTypes, Model } from "sequelize";
 import db from ".";
 import { Status } from "../../enum/Status";
 
