@@ -1,5 +1,6 @@
 import express from "express";
-export default class App {
+import taskRoute from "./route/TaskRoute";
+class App {
   public app: express.Express;
 
   constructor() {
@@ -15,7 +16,8 @@ export default class App {
       next();
     };
     this.app.use(accessControl);
-    this.app.use(express.json);
+    this.app.use(express.json());
+    this.app.use('/task', taskRoute);
   }
 
   public start(PORT: string | number):void {
@@ -24,5 +26,7 @@ export default class App {
     });
   }
 }
+
+export { App };
 
 export const { app } = new App();
