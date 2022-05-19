@@ -1,4 +1,5 @@
 import TaskModel from "../database/models/Task";
+import { Status } from "../enum/Status";
 import ITask from "../interface/ITask";
 
 export class TaskService {
@@ -12,8 +13,8 @@ export class TaskService {
     return createdTask.id;
   };
 
-  public changeTask = async (task: ITask, id: number) => {
-    const updatedTask = await TaskModel.update({ ...task },
+  public changeStatus = async (status: Status, id: number) => {
+    const updatedTask = await TaskModel.update({ status },
       { where: { id } }
     );
     return updatedTask;

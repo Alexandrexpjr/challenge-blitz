@@ -24,4 +24,16 @@ export default class TaskController {
       return res.status(404).json({ message: "Não existe task com este id!" });
     }
   };
+
+  public updateStatus = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    try {
+      await this.service.changeStatus(status, Number(id));
+      return res.status(201).json({ message: "OK!" });
+    } catch (error) {
+      return res.status(404).json({ message: "Não existe task com este id!" });
+    }
+  };
+  
 }
