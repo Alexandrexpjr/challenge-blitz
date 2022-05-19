@@ -5,7 +5,7 @@ export default class TaskController {
   private service: TaskService;
   constructor() {
     this.service = new TaskService();
-  };
+  }
 
   public getTasks = async (req: Request, res: Response) => {
     try {
@@ -13,6 +13,15 @@ export default class TaskController {
       return res.status(200).json(tasks);
     } catch (error) {
       return res.status(500).json({ message: "Algo deu errado!" });
+    }
+  };
+
+  public addTask = async (req: Request, res: Response) => {
+    try {
+      const createdTask = await this.service.addTask(req.body);
+      return res.status(201).json(createdTask);
+    } catch (error) {
+      return res.status(404).json({ message: "Não existe task com este id!" });
     }
   };
 }

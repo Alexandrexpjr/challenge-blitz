@@ -7,4 +7,4 @@ export default interface ITask {
   status: Status,
   createdAt?: Date,
   updatedAt?: Date
-};
+}
