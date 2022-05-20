@@ -16,7 +16,6 @@ function ToDo() {
       setToDo(tasks);
       setLoading(false);
     };
-    console.log(toDo);
     getTodo()
   }, [totalTasks]);
 
