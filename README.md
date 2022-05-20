@@ -19,7 +19,7 @@ Na Ebytr o time de desenvolvimento utiliza a Stack MySQL, Express, React e Node 
 Clone o projeto
 
 ```bash
-  git clone 
+  git clone git@github.com:Alexandrexpjr/challenge-blitz.git
 ```
 
 Entre no diretório do projeto
