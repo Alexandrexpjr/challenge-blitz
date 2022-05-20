@@ -1,6 +1,5 @@
-export const formatDate = (date) => {
-  const [year, month, rest] = date.split('-');
-  const [day, timeWithSeconds] = rest.split('T');
-  const [time] = timeWithSeconds.split('.');
-  return { date: day + '/' + month + '/' + year, time}
+export const formatDateTime = (dateTime) => {
+  const localDateTime = new Date(dateTime).toLocaleString("pt-BR");
+  const [date, time] = localDateTime.split(' ');
+  return { date, time }
 }
