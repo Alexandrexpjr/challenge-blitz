@@ -15,6 +15,10 @@ export const changeStatus = async (endpoint, body) => {
 
 export const createTask = async (endpoint, body) => {
   await api.post(endpoint, body);
-}
+};
+
+export const deleteTask = async (endpoint) => {
+  await api.delete(endpoint);
+};
 
 export default api;
