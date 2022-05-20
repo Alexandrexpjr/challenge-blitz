@@ -12,7 +12,7 @@ function Task(props) {
   const handleChange = async ({ target }) => {
     setStatus(target.value);
     await changeStatus(`/task/${id}`, { status: target.value });
-    if (currentStatus === 'Pronto') {
+    if (target.value === 'pronto') {
       await removeTask();
     };
   };

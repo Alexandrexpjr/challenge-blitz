@@ -38,7 +38,7 @@ function AddTask() {
         </select>
       </label>
 
-      <button type="submit" onClick={ handleClick }>Adicionar tarefa</button>
+      <button type="submit" onClick={ handleClick } className="add-task-btn">Adicionar tarefa</button>
     </form>
   );
 }
